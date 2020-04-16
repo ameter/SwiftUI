@@ -21,6 +21,7 @@ struct SettingsView: View {
     @State private var term2Max = 9
     
     @State private var allowNegativeAnswers = false
+    @State private var allowFractionalAnswers = false
     
     let questionCounts = ["5", "10", "15", "All"]
     @State private var numberOfQuestions = 0
@@ -90,6 +91,10 @@ struct SettingsView: View {
                     Toggle(isOn: $allowNegativeAnswers) {
                         Text("Include negative answers")
                     }
+                    
+                    Toggle(isOn: $allowFractionalAnswers) {
+                        Text("Include fraction answers")
+                    }
                 }
             }
             .navigationBarTitle("New Game")
@@ -115,7 +120,11 @@ struct SettingsView: View {
             for op in operators {
                 for term1 in term1Min...term1Max {
                     for term2 in term2Min...term2Max {
-                        if op == Operator.subtract && term1 < term2 && !allowNegativeAnswers { continue }
+                        if op == Operator.divide && term2 == 0 { continue }
+                        
+                        if !allowNegativeAnswers && op == Operator.subtract && term1 < term2 { continue }
+                        
+                        if !allowFractionalAnswers && op == Operator.divide && term1 % term2 != 0 { continue }
                         
                         questions.append(MathQuestion(terms: [term1, term2], op: op))
                     }
@@ -128,10 +137,19 @@ struct SettingsView: View {
                 var term1 = Int.random(in: term1Min...term1Max)
                 var term2 = Int.random(in: term2Min...term2Max)
                 
-                if op == Operator.subtract && term1 < term2 && !allowNegativeAnswers {
+                if op == Operator.divide && term2 == 0 { term2 = 1 }
+                
+                if !allowNegativeAnswers && op == Operator.subtract && term1 < term2 {
                     let temp = term1
                     term1 = term2
                     term2 = temp
+                }
+                
+                while !allowFractionalAnswers && op == Operator.divide && term1 % term2 != 0 {
+                    term1 = Int.random(in: term1Min...term1Max)
+                    term2 = Int.random(in: term2Min...term2Max)
+                    
+                    if op == Operator.divide && term2 == 0 { term2 = 1 }
                 }
                 
                 questions.append(MathQuestion(terms: [term1, term2], op: op))
