@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var gameIsActive = false
-    @State private var questions = [MathQuestion]()
+    @State private var questions = [Question]()
     
     var body: some View {
         Group {
@@ -23,7 +23,7 @@ struct ContentView: View {
         }
     }
     
-    func startGame(questions: [MathQuestion]) {
+    func startGame(questions: [Question]) {
         self.questions = questions
         gameIsActive = true
     }

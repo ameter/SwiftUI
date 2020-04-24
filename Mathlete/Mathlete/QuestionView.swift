@@ -21,7 +21,7 @@ struct QuestionView: View {
     
     var score = 100
     
-    var questions: [MathQuestion]
+    var questions: [Question]
     var endGame: () -> Void
     
     var body: some View {

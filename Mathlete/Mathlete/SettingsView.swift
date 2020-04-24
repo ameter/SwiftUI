@@ -26,7 +26,7 @@ struct SettingsView: View {
     let questionCounts = ["5", "10", "15", "All"]
     @State private var numberOfQuestions = 0
     
-    var startGame: ([MathQuestion]) -> Void
+    var startGame: ([Question]) -> Void
     
     var body: some View {
         NavigationView {
