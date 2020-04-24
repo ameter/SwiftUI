@@ -16,6 +16,8 @@
 		8391B4FC24531F3800A88001 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391B4FB24531F3800A88001 /* Order.swift */; };
 		8391B4FE245323E700A88001 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391B4FD245323E700A88001 /* AddressView.swift */; };
 		8391B50024533B3F00A88001 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391B4FF24533B3F00A88001 /* CheckoutView.swift */; };
+		8391B502245363FC00A88001 /* OrderStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391B501245363FC00A88001 /* OrderStruct.swift */; };
+		8391B504245364D900A88001 /* OrderWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8391B503245364D900A88001 /* OrderWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		8391B4FB24531F3800A88001 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = SOURCE_ROOT; };
 		8391B4FD245323E700A88001 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		8391B4FF24533B3F00A88001 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		8391B501245363FC00A88001 /* OrderStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStruct.swift; sourceTree = SOURCE_ROOT; };
+		8391B503245364D900A88001 /* OrderWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				8391B4E724523F0E00A88001 /* AppDelegate.swift */,
 				8391B4E924523F0E00A88001 /* SceneDelegate.swift */,
 				8391B4FB24531F3800A88001 /* Order.swift */,
+				8391B501245363FC00A88001 /* OrderStruct.swift */,
+				8391B503245364D900A88001 /* OrderWrapper.swift */,
 				8391B4EB24523F0E00A88001 /* ContentView.swift */,
 				8391B4FD245323E700A88001 /* AddressView.swift */,
 				8391B4FF24533B3F00A88001 /* CheckoutView.swift */,
@@ -157,6 +163,8 @@
 			files = (
 				8391B4E824523F0E00A88001 /* AppDelegate.swift in Sources */,
 				8391B4EA24523F0E00A88001 /* SceneDelegate.swift in Sources */,
+				8391B504245364D900A88001 /* OrderWrapper.swift in Sources */,
+				8391B502245363FC00A88001 /* OrderStruct.swift in Sources */,
 				8391B50024533B3F00A88001 /* CheckoutView.swift in Sources */,
 				8391B4FC24531F3800A88001 /* Order.swift in Sources */,
 				8391B4EC24523F0E00A88001 /* ContentView.swift in Sources */,
