@@ -9,10 +9,6 @@
 import Foundation
 
 struct OrderStruct: Codable {
-    enum CodingKeys: CodingKey {
-        case type, quantity, extraFrosting, addSprinkles, name, streetAddress, city, zip
-    }
-    
     static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
 
     var type = 0
