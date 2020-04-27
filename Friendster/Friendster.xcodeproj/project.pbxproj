@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		837411CB245744E800011005 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837411CA245744E800011005 /* User.swift */; };
 		83D6CD162456066C008CC790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD152456066C008CC790 /* AppDelegate.swift */; };
 		83D6CD182456066C008CC790 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD172456066C008CC790 /* SceneDelegate.swift */; };
 		83D6CD1B2456066C008CC790 /* Friendster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD192456066C008CC790 /* Friendster.xcdatamodeld */; };
@@ -14,12 +15,12 @@
 		83D6CD1F2456066C008CC790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D6CD1E2456066C008CC790 /* Assets.xcassets */; };
 		83D6CD222456066C008CC790 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D6CD212456066C008CC790 /* Preview Assets.xcassets */; };
 		83D6CD252456066C008CC790 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D6CD232456066C008CC790 /* LaunchScreen.storyboard */; };
-		83D6CD2D24563113008CC790 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD2C24563113008CC790 /* User.swift */; };
 		83D6CD2F245633D9008CC790 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD2E245633D9008CC790 /* Users.swift */; };
 		83D6CD31245657B2008CC790 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD30245657B2008CC790 /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		837411CA245744E800011005 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		83D6CD122456066C008CC790 /* Friendster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D6CD152456066C008CC790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D6CD172456066C008CC790 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		83D6CD212456066C008CC790 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		83D6CD242456066C008CC790 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83D6CD262456066C008CC790 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		83D6CD2C24563113008CC790 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = SOURCE_ROOT; };
 		83D6CD2E245633D9008CC790 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		83D6CD30245657B2008CC790 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +66,7 @@
 			children = (
 				83D6CD152456066C008CC790 /* AppDelegate.swift */,
 				83D6CD172456066C008CC790 /* SceneDelegate.swift */,
-				83D6CD2C24563113008CC790 /* User.swift */,
+				837411CA245744E800011005 /* User.swift */,
 				83D6CD2E245633D9008CC790 /* Users.swift */,
 				83D6CD1C2456066C008CC790 /* ContentView.swift */,
 				83D6CD30245657B2008CC790 /* UserView.swift */,
@@ -161,10 +161,10 @@
 				83D6CD162456066C008CC790 /* AppDelegate.swift in Sources */,
 				83D6CD1B2456066C008CC790 /* Friendster.xcdatamodeld in Sources */,
 				83D6CD1D2456066C008CC790 /* ContentView.swift in Sources */,
-				83D6CD2D24563113008CC790 /* User.swift in Sources */,
 				83D6CD2F245633D9008CC790 /* Users.swift in Sources */,
 				83D6CD182456066C008CC790 /* SceneDelegate.swift in Sources */,
 				83D6CD31245657B2008CC790 /* UserView.swift in Sources */,
+				837411CB245744E800011005 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
