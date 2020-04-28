@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		837411CB245744E800011005 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837411CA245744E800011005 /* User.swift */; };
+		837411CB245744E800011005 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837411CA245744E800011005 /* UserData.swift */; };
+		83AD48D92457904C00A60C59 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD48D72457904C00A60C59 /* User+CoreDataClass.swift */; };
+		83AD48DA2457904C00A60C59 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AD48D82457904C00A60C59 /* User+CoreDataProperties.swift */; };
 		83D6CD162456066C008CC790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD152456066C008CC790 /* AppDelegate.swift */; };
 		83D6CD182456066C008CC790 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD172456066C008CC790 /* SceneDelegate.swift */; };
 		83D6CD1B2456066C008CC790 /* Friendster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83D6CD192456066C008CC790 /* Friendster.xcdatamodeld */; };
@@ -20,7 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		837411CA245744E800011005 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		837411CA245744E800011005 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		83AD48D72457904C00A60C59 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		83AD48D82457904C00A60C59 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		83D6CD122456066C008CC790 /* Friendster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friendster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D6CD152456066C008CC790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D6CD172456066C008CC790 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +68,11 @@
 		83D6CD142456066C008CC790 /* Friendster */ = {
 			isa = PBXGroup;
 			children = (
+				83AD48D72457904C00A60C59 /* User+CoreDataClass.swift */,
+				83AD48D82457904C00A60C59 /* User+CoreDataProperties.swift */,
 				83D6CD152456066C008CC790 /* AppDelegate.swift */,
 				83D6CD172456066C008CC790 /* SceneDelegate.swift */,
-				837411CA245744E800011005 /* User.swift */,
+				837411CA245744E800011005 /* UserData.swift */,
 				83D6CD2E245633D9008CC790 /* Users.swift */,
 				83D6CD1C2456066C008CC790 /* ContentView.swift */,
 				83D6CD30245657B2008CC790 /* UserView.swift */,
@@ -164,7 +170,9 @@
 				83D6CD2F245633D9008CC790 /* Users.swift in Sources */,
 				83D6CD182456066C008CC790 /* SceneDelegate.swift in Sources */,
 				83D6CD31245657B2008CC790 /* UserView.swift in Sources */,
-				837411CB245744E800011005 /* User.swift in Sources */,
+				83AD48D92457904C00A60C59 /* User+CoreDataClass.swift in Sources */,
+				837411CB245744E800011005 /* UserData.swift in Sources */,
+				83AD48DA2457904C00A60C59 /* User+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,15 +9,15 @@
 import Foundation
 
 class Users: ObservableObject {
-    @Published var items = [User]()
-    
+    @Published var items = [UserData]()
+
     init() {
         // prepare request
         let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "GET"
-        
+
         // send request
         URLSession.shared.dataTask(with: request) { data, response, error in
             // handle the response
@@ -29,9 +29,9 @@ class Users: ObservableObject {
             do {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
-                
+
                 //let decodedUsers = try JSONDecoder().decode([User].self, from: data)
-                let decodedUsers = try decoder.decode([User].self, from: data)
+                let decodedUsers = try decoder.decode([UserData].self, from: data)
                 // use DispatchQueue.main.async to send work back to the main thread
                 // I think this is needed here because items is observed and triggers a UI update.
                 DispatchQueue.main.async {
@@ -41,11 +41,13 @@ class Users: ObservableObject {
                 print("Error: \(error)")
             }
         }.resume()
-        
-        self.items = [User]()
+
+        self.items = [UserData]()
     }
-    
-    func getFriend(friend: User.Friend) -> User? {
+
+    func getFriend(friend: UserData.Friend) -> UserData? {
         items.first(where: { $0.id == friend.id } )
     }
+
+
 }
