@@ -138,7 +138,7 @@ struct ContentView: View {
             .actionSheet(isPresented: $showingFilterSheet) {
                 // action sheet here
                 ActionSheet(title: Text("Select a filter"), buttons: [
-                    //.default(Text("Crystallize")) { self.setFilter(CIFilter.crystallize()) },
+                    .default(Text("Crystallize")) { self.setFilter(CIFilter.crystallize()) },
                     .default(Text("Edges")) { self.setFilter(CIFilter.edges()) },
                     .default(Text("Gaussian Blur")) { self.setFilter(CIFilter.gaussianBlur()) },
                     .default(Text("Pixellate")) { self.setFilter(CIFilter.pixellate()) },
