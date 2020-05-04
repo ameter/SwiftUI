@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8328C0E024606B0C00B9570E /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328C0DF24606B0C00B9570E /* KeyboardResponder.swift */; };
 		8328C0E22460893800B9570E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328C0E12460893800B9570E /* DetailView.swift */; };
+		8328C0E4246096E900B9570E /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328C0E3246096E900B9570E /* LocationFetcher.swift */; };
+		8328C0E82460A84600B9570E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8328C0E72460A84600B9570E /* MapView.swift */; };
 		839CA3B4245F13E100301CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CA3B3245F13E100301CB3 /* AppDelegate.swift */; };
 		839CA3B6245F13E100301CB3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CA3B5245F13E100301CB3 /* SceneDelegate.swift */; };
 		839CA3B8245F13E100301CB3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CA3B7245F13E100301CB3 /* ContentView.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		8328C0DF24606B0C00B9570E /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		8328C0E12460893800B9570E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8328C0E3246096E900B9570E /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		8328C0E72460A84600B9570E /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		839CA3B0245F13E100301CB3 /* PhotoRecall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoRecall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839CA3B3245F13E100301CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839CA3B5245F13E100301CB3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				839CA3B3245F13E100301CB3 /* AppDelegate.swift */,
 				839CA3B5245F13E100301CB3 /* SceneDelegate.swift */,
 				839CA3B7245F13E100301CB3 /* ContentView.swift */,
+				8328C0E72460A84600B9570E /* MapView.swift */,
+				8328C0E3246096E900B9570E /* LocationFetcher.swift */,
 				8328C0E12460893800B9570E /* DetailView.swift */,
 				839CA3CF245F511F00301CB3 /* ImportView.swift */,
 				839CA3CD245F4F7400301CB3 /* ImagePicker.swift */,
@@ -166,6 +172,8 @@
 			files = (
 				839CA3D0245F511F00301CB3 /* ImportView.swift in Sources */,
 				8328C0E22460893800B9570E /* DetailView.swift in Sources */,
+				8328C0E4246096E900B9570E /* LocationFetcher.swift in Sources */,
+				8328C0E82460A84600B9570E /* MapView.swift in Sources */,
 				839CA3C8245F141400301CB3 /* Photo.swift in Sources */,
 				839CA3B4245F13E100301CB3 /* AppDelegate.swift in Sources */,
 				839CA3B6245F13E100301CB3 /* SceneDelegate.swift in Sources */,

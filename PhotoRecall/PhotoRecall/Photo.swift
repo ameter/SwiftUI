@@ -8,10 +8,22 @@
 
 import SwiftUI
 import UIKit
+import CoreLocation
 
 struct Photo: Codable, Identifiable, Comparable {
     var id = UUID()
     var name: String
+    
+    var latitude: Double?
+    var longitude: Double?
+    
+    var location: CLLocationCoordinate2D? {
+        if let latitude = latitude, let longitude = longitude {
+            return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        } else {
+            return nil
+        }
+    }
     
     private let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     

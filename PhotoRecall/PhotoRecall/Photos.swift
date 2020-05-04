@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import CoreLocation
 
 class Photos: ObservableObject {
     @Published var items = [Photo]()
@@ -37,10 +38,10 @@ class Photos: ObservableObject {
         try data.write(to: filename, options: [.atomicWrite, .completeFileProtection])
     }
     
-    func addPhoto(name: String, image: UIImage) {
+    func addPhoto(name: String, image: UIImage, location: CLLocationCoordinate2D?) {
         do {
             if let jpegData = image.jpegData(compressionQuality: 0.8) {
-                let photo = Photo(name: name)
+                let photo = Photo(name: name, latitude: location?.latitude, longitude: location?.longitude)
                 items.append(photo)
                 
                 let jsonData = try JSONEncoder().encode(self.items)

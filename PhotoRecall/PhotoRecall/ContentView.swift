@@ -13,10 +13,12 @@ struct ContentView: View {
     @State private var showingImportView = false
     @Environment(\.presentationMode) var presentationMode
     
+    var locationFetcher = LocationFetcher()
+    
     var body: some View {
         NavigationView {
             List(photos.items) { photo in
-                NavigationLink(destination: DetailView(name: photo.name, image: photo.image)) {
+                NavigationLink(destination: DetailView(photo: photo)) {
                     photo.image?
                         .resizable()
                         .scaledToFit()
@@ -33,7 +35,10 @@ struct ContentView: View {
                     .padding()
             })
                 .sheet(isPresented: $showingImportView) {
-                    ImportView(photos: self.photos)
+                    ImportView(photos: self.photos, locationFetcher: self.locationFetcher)
+            }
+            .onAppear() {
+                self.locationFetcher.start()
             }
         }
     }

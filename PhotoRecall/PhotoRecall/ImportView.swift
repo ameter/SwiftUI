@@ -21,6 +21,8 @@ struct ImportView: View {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject private var keyboard = KeyboardResponder()
     
+    var locationFetcher: LocationFetcher
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -65,7 +67,7 @@ struct ImportView: View {
     
     func save() {
         if let image = image {
-            photos.addPhoto(name: name, image: image)
+            photos.addPhoto(name: name, image: image, location: self.locationFetcher.lastKnownLocation)
             self.presentationMode.wrappedValue.dismiss()
         }
     }
@@ -73,7 +75,7 @@ struct ImportView: View {
 
 struct ImportView_Previews: PreviewProvider {
     static var previews: some View {
-        ImportView(photos: Photos())
+        ImportView(photos: Photos(), locationFetcher: LocationFetcher())
     }
 }
 

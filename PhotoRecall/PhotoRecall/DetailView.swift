@@ -9,23 +9,26 @@
 import SwiftUI
 
 struct DetailView: View {
-    let name: String
-    let image: Image?
+    let photo: Photo
     
     var body: some View {
         VStack {
-            image?
+            photo.image?
                 .resizable()
                 .scaledToFit()
             
+            if photo.location != nil {
+                MapView(location: photo.location!)
+            }
+            
             Spacer()
         }
-        .navigationBarTitle(Text(name), displayMode: .inline)
+        .navigationBarTitle(Text(photo.name), displayMode: .inline)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(name: "Name", image: nil)
+        DetailView(photo: Photo(name: "blah"))
     }
 }
