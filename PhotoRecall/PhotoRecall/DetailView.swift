@@ -13,9 +13,12 @@ struct DetailView: View {
     
     var body: some View {
         VStack {
-            photo.image?
+            if photo.image != nil {
+                Image(uiImage: photo.image!)
                 .resizable()
-                .scaledToFit()
+                //.scaledToFit()
+                .aspectRatio(photo.image!.size, contentMode: .fit)
+            }
             
             if photo.location != nil {
                 MapView(location: photo.location!)

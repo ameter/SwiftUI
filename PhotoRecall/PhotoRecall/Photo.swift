@@ -27,11 +27,12 @@ struct Photo: Codable, Identifiable, Comparable {
     
     private let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
-    var image: Image? {
+    var image: UIImage? {
         let filename = documentsDirectory.appendingPathComponent(id.uuidString)
         if let data = try? Data(contentsOf: filename) {
             if let uiImage = UIImage(data: data) {
-                return Image(uiImage: uiImage)
+                //return Image(uiImage: uiImage)
+                return uiImage
             }
         }
         return nil

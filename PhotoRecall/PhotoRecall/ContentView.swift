@@ -19,10 +19,13 @@ struct ContentView: View {
         NavigationView {
             List(photos.items) { photo in
                 NavigationLink(destination: DetailView(photo: photo)) {
-                    photo.image?
+                    if photo.image != nil {
+                        Image(uiImage: photo.image!)
                         .resizable()
-                        .scaledToFit()
+                        //.scaledToFit()
+                            .aspectRatio(photo.image!.size, contentMode: .fit)
                         .frame(width: 50, height: 50)
+                    }
                     
                     Text(photo.name)
                 }

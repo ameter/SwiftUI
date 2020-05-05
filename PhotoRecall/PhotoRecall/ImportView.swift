@@ -33,7 +33,8 @@ struct ImportView: View {
                     ScrollView {
                         Image(uiImage: self.image!)
                             .resizable()
-                            .scaledToFit()
+                            //.scaledToFit()
+                            .aspectRatio(self.image!.size, contentMode: .fit)
                         
                         TextField("Image Name", text: self.$name)
                             //.padding()
