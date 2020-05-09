@@ -157,8 +157,6 @@ struct ContentView: View {
         .onReceive(timer) { time in
             guard self.isActive else { return }
             
-            print(self.timeRemaining)
-            
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
             }
@@ -172,7 +170,6 @@ struct ContentView: View {
             }
             
             if self.timeRemaining == 0 {
-                print("out of time")
                 self.gameOverHaptic()
                 self.isActive = false
             }
@@ -203,7 +200,7 @@ struct ContentView: View {
     
     func resetCards() {
         //cards = [Card](repeating: Card.example, count: 10)
-        timeRemaining = 10
+        timeRemaining = 100
         isActive = true
         loadData()
     }
