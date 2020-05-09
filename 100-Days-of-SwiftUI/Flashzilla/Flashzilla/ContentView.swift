@@ -13,7 +13,7 @@ struct ContentView: View {
     @Environment(\.accessibilityEnabled) var accessibilityEnabled
     
     @State private var cards = [Card]()
-    @State private var timeRemaining = 100
+    @State private var timeRemaining = 0
     @State private var isActive = true
     @State private var showingEditView = false
     
@@ -161,7 +161,7 @@ struct ContentView: View {
     }
     
     func resetCards() {
-        timeRemaining = 100
+        timeRemaining = 10
         isActive = true
         loadData()
     }
