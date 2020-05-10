@@ -8,6 +8,24 @@
 
 import SwiftUI
 
+struct GeometryGetter: View {
+    @Binding var rect: CGRect
+
+    var body: some View {
+        return GeometryReader { geometry in
+            self.makeView(geometry: geometry)
+        }
+    }
+
+    func makeView(geometry: GeometryProxy) -> some View {
+        DispatchQueue.main.async {
+            self.rect = geometry.frame(in: .global)
+        }
+
+        return Rectangle().fill(Color.clear)
+    }
+}
+
 struct MissionView: View {
     struct CrewMember {
         let role: String
@@ -17,6 +35,8 @@ struct MissionView: View {
     let mission: Mission
     let astronauts: [CrewMember]
     
+    @State private var rect: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView(.vertical) {
@@ -24,15 +44,27 @@ struct MissionView: View {
                     Image(self.mission.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.7)
+                        //.scaleEffect(1 - (abs(self.rect.minY - geometry.safeAreaInsets.top < 0 ? self.rect.minY - geometry.safeAreaInsets.top : 0 ) / self.rect.height), anchor: .bottom)
+                        .scaleEffect(max(1 - (abs(min(self.rect.minY - geometry.safeAreaInsets.top, 0.0)) / self.rect.height), 0.3), anchor: .bottom)
                         .padding(.top)
+                        .frame(width: geometry.size.width * 0.7)
+//                        .background(Color.red)
+                        .background(GeometryGetter(rect: self.$rect))
+                        
                     
                     if self.mission.launchDate != nil {
                         Text(DateFormatter.localizedString(from: self.mission.launchDate!, dateStyle: .full, timeStyle: .none))
                     }
                     
                     Text(self.mission.description)
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding()
+//                    .onTapGesture {
+//                        print("outter height: \(geometry.size.height)")
+//                        print("other: \(geometry.safeAreaInsets)")
+//                        print("rext: \(self.rect)")
+//                        print("computed: \(1 - (abs(self.rect.minY - geometry.safeAreaInsets.top) / self.rect.height))")
+//                    }
                     
                     ForEach(self.astronauts, id: \.role) { CrewMember in
                         NavigationLink(destination: AstronautView(astronaut: CrewMember.astronaut)) {
@@ -43,7 +75,7 @@ struct MissionView: View {
                                     .clipShape(Capsule())
                                     .overlay(Capsule()
                                         .stroke(Color.primary, lineWidth: 1))
-                            
+                                
                                 VStack(alignment: .leading) {
                                     Text(CrewMember.astronaut.name)
                                         .font(.headline)

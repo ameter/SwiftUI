@@ -148,7 +148,6 @@ struct ContentView: View {
                 Text("Tap to select a view")
                     .padding()
                     .background(Color.blue)
-                    .clipped()
                     .clipShape(RoundedRectangle(cornerRadius: 25))
                     .shadow(radius: 25)
             }
