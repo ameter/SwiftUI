@@ -19,8 +19,7 @@ struct FlagImage: View {
         Image(image)
             .renderingMode(.original)
             .clipShape(Capsule())
-            .overlay(Capsule()
-                .stroke(Color.black, lineWidth: 1))
+            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
             .shadow(color: .black, radius: 2)
     }
 }
