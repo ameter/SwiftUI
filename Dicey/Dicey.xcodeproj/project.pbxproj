@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		838A633A2468762600ED1EE5 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A63392468762600ED1EE5 /* DiceView.swift */; };
+		838A633C2468763500ED1EE5 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838A633B2468763500ED1EE5 /* ResultsView.swift */; };
 		83D86DF72468723F00B47DD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D86DF62468723F00B47DD0 /* AppDelegate.swift */; };
 		83D86DF92468723F00B47DD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D86DF82468723F00B47DD0 /* SceneDelegate.swift */; };
 		83D86DFC2468723F00B47DD0 /* Dicey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83D86DFA2468723F00B47DD0 /* Dicey.xcdatamodeld */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		838A63392468762600ED1EE5 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		838A633B2468763500ED1EE5 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		83D86DF32468723F00B47DD0 /* Dicey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dicey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D86DF62468723F00B47DD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D86DF82468723F00B47DD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				83D86DF62468723F00B47DD0 /* AppDelegate.swift */,
 				83D86DF82468723F00B47DD0 /* SceneDelegate.swift */,
 				83D86DFD2468723F00B47DD0 /* ContentView.swift */,
+				838A63392468762600ED1EE5 /* DiceView.swift */,
+				838A633B2468763500ED1EE5 /* ResultsView.swift */,
 				83D86DFF2468724000B47DD0 /* Assets.xcassets */,
 				83D86E042468724000B47DD0 /* LaunchScreen.storyboard */,
 				83D86E072468724000B47DD0 /* Info.plist */,
@@ -150,6 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83D86DF72468723F00B47DD0 /* AppDelegate.swift in Sources */,
+				838A633C2468763500ED1EE5 /* ResultsView.swift in Sources */,
+				838A633A2468762600ED1EE5 /* DiceView.swift in Sources */,
 				83D86DF92468723F00B47DD0 /* SceneDelegate.swift in Sources */,
 				83D86DFE2468723F00B47DD0 /* ContentView.swift in Sources */,
 				83D86DFC2468723F00B47DD0 /* Dicey.xcdatamodeld in Sources */,
