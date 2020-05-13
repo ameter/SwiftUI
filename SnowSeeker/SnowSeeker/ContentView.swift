@@ -119,6 +119,7 @@ struct ContentView: View {
                     
                 }) {
                     Image(systemName: "line.horizontal.3.decrease.circle")
+                        .padding([.leading, .vertical])
                 }
             )
             .sheet(isPresented: $showingSheet) {
