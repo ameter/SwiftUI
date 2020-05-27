@@ -124,3 +124,12 @@ private struct UITextViewWrapper: UIViewRepresentable {
     }
 
 }
+
+struct MultilineTextView_Previews: PreviewProvider {
+    static var previews: some View {
+        GrowingTextView("placeholder", text: .constant("Hello, World!")) {
+            print("committed")
+        }
+    }
+}
+
