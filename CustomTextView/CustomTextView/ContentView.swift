@@ -9,25 +9,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    static var test:String = ""
-    static var testBinding = Binding<String>(get: { test }, set: { test = $0 } )
+    @ObservedObject private var keyboard = KeyboardResponder()
+    
+    @State private var test = ""
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .leading) {
                 Text("Enter Review Comments:")
-                MultilineTextView("Type here", text: ContentView.testBinding, onCommit: {
-                    print("Final text: \(ContentView.test)")
+                    .onTapGesture {
+                        print(self.test)
+                    }
+                MultilineTextView("Type here", text: $test, onCommit: {
+                    print("Final text: \(self.test)")
                 })
                 .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray))
-                Button(action: {
-                    print("send Clicked")
-                }) {
-                    Text("send")
-                }
-                Spacer()
             }
-            .padding()
             .navigationBarTitle(Text("SwiftUI"))
+            .padding(.bottom, keyboard.currentHeight)
         }
         
     }
