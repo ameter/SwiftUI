@@ -8,27 +8,20 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
-    @ObservedObject private var keyboard = KeyboardResponder()
     
-    @State private var test = ""
+    @ObservedObject private var keyboard = KeyboardResponder()
+    @State private var text = ""
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                Text("Enter Review Comments:")
-                    .onTapGesture {
-                        print(self.test)
-                    }
-                MultilineTextView("Type here", text: $test, onCommit: {
-                    print("Final text: \(self.test)")
-                })
-                .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.gray))
-            }
-            .navigationBarTitle(Text("SwiftUI"))
-            .padding(.bottom, keyboard.currentHeight)
+        TextView(text: $text) {
+            $0.textColor = .red
+            $0.text = "hmmmm"
+            // Any other setup you like
         }
-        
+        .padding(.bottom, keyboard.currentHeight)
     }
 }
 

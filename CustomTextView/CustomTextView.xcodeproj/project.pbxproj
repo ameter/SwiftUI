@@ -16,6 +16,7 @@
 		83016AE0247F0DEC00173905 /* GrowingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83016ADF247F0DEC00173905 /* GrowingTextView.swift */; };
 		83A2FADF247F145200096B39 /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FADE247F145200096B39 /* MultilineTextView.swift */; };
 		83A2FAE1247F248800096B39 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FAE0247F248800096B39 /* KeyboardResponder.swift */; };
+		83A2FAE3247F3C9600096B39 /* NewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FAE2247F3C9600096B39 /* NewTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		83016ADF247F0DEC00173905 /* GrowingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowingTextView.swift; sourceTree = "<group>"; };
 		83A2FADE247F145200096B39 /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
 		83A2FAE0247F248800096B39 /* KeyboardResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
+		83A2FAE2247F3C9600096B39 /* NewTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				83A2FADE247F145200096B39 /* MultilineTextView.swift */,
 				83016ACB247F0DB700173905 /* AppDelegate.swift */,
 				83016ACD247F0DB700173905 /* SceneDelegate.swift */,
+				83A2FAE2247F3C9600096B39 /* NewTextView.swift */,
 				83016ACF247F0DB700173905 /* ContentView.swift */,
 				83016AD1247F0DB800173905 /* Assets.xcassets */,
 				83016AD6247F0DB800173905 /* LaunchScreen.storyboard */,
@@ -159,6 +162,7 @@
 				83016ACC247F0DB700173905 /* AppDelegate.swift in Sources */,
 				83016ACE247F0DB700173905 /* SceneDelegate.swift in Sources */,
 				83016AE0247F0DEC00173905 /* GrowingTextView.swift in Sources */,
+				83A2FAE3247F3C9600096B39 /* NewTextView.swift in Sources */,
 				83016AD0247F0DB700173905 /* ContentView.swift in Sources */,
 				83A2FAE1247F248800096B39 /* KeyboardResponder.swift in Sources */,
 			);
