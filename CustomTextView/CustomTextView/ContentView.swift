@@ -17,9 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         TextView(text: $text) {
-            $0.textColor = .red
-            $0.text = "hmmmm"
-            // Any other setup you like
+            print("done!")
         }
         .padding(.bottom, keyboard.currentHeight)
     }
