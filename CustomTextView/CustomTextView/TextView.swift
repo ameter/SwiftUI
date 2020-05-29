@@ -7,6 +7,10 @@ struct TextView: UIViewRepresentable {
     @Binding var text: String
     
     var returnKeyType = UIReturnKeyType.default
+    var font = UIFont.TextStyle.body
+    var textColor: UIColor? = nil
+    var keyboardType = UIKeyboardType.default
+    
     var onCommit: (() -> Void)? = nil
     //var font: 
     
@@ -21,9 +25,12 @@ struct TextView: UIViewRepresentable {
 //        }
         
         // style it here
-        //textView.textColor = .red
+        textView.backgroundColor = .clear
+        textView.usesStandardTextScaling = true
         textView.returnKeyType = returnKeyType
         textView.font = .preferredFont(forTextStyle: .body)
+        if let textColor = textColor { textView.textColor = textColor }
+        textView.keyboardType = keyboardType
         
         return textView
     }
