@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         TextView(text: $text) {
-            print("done!")
+            print("you typed: \(self.text)")
         }
         .padding(.bottom, keyboard.currentHeight)
     }
