@@ -28,9 +28,10 @@ struct TextView: UIViewRepresentable {
         textView.backgroundColor = .clear
         textView.usesStandardTextScaling = true
         textView.returnKeyType = returnKeyType
-        textView.font = .preferredFont(forTextStyle: .body)
+        textView.font = .preferredFont(forTextStyle: font)
         if let textColor = textColor { textView.textColor = textColor }
         textView.keyboardType = keyboardType
+        textView.text = text  // This is necessary for times it is reinitialized after being typed in (e.g. rotation)
         
         return textView
     }
@@ -55,7 +56,6 @@ struct TextView: UIViewRepresentable {
         func textViewDidChange(_ uiView: UITextView) {
             parent.text = uiView.text
         }
-        
         
         func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
             if let onCommit = parent.onCommit, text == "\n" {
