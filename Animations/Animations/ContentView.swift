@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    @State private var animationAmount: CGFloat = 1.0
+    @State private var animationAmount: CGFloat = 1.0
     
     // gestures 1
 //    @State private var dragAmount = CGSize.zero
@@ -26,7 +26,7 @@ struct ContentView: View {
     @State private var isShowingRed = false
     
     var body: some View {
-//        VStack {
+        VStack {
 //            Spacer()
 //
 //            Button("Tap me") {
@@ -81,20 +81,20 @@ struct ContentView: View {
 ////            .scaleEffect(animationAmount)
 //
 //            Spacer()
-//
-//            Button("Tap me") {
-//                withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
-//                     self.animationAmount += 90
-//                }
-//            }
-//            .padding(50)
-//            .background(Color.red)
-//            .foregroundColor(.white)
-//            .clipShape(Circle())
-//            .rotation3DEffect(.degrees(Double(animationAmount)), axis: (x: 0, y: 1, z: 0))
-//
-//            Spacer()
-//        }
+
+            Button("Tap me") {
+                withAnimation(.interpolatingSpring(stiffness: 5, damping: 1)) {
+                     self.animationAmount += 90
+                }
+            }
+            .padding(50)
+            .background(Color.red)
+            .foregroundColor(.white)
+            .clipShape(Circle())
+            .rotation3DEffect(.degrees(Double(animationAmount)), axis: (x: 0, y: 1, z: 0))
+
+            Spacer()
+        }
         
 //        // gestures 1
 //        LinearGradient(gradient: Gradient(colors: [.yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -142,24 +142,24 @@ struct ContentView: View {
         
         
         
-        // transitions
-        VStack {
-            Button("Tap Me") {
-                withAnimation {
-                    self.isShowingRed.toggle()
-                }
-            }
-            
-            if isShowingRed {
-                Rectangle()
-                    .fill(Color.red)
-                    .frame(width: 200, height: 200)
-                    // simple
-//                    .transition(.scale)
-                    // asymetric
-                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
-            }
-        }
+//        // transitions
+//        VStack {
+//            Button("Tap Me") {
+//                withAnimation {
+//                    self.isShowingRed.toggle()
+//                }
+//            }
+//
+//            if isShowingRed {
+//                Rectangle()
+//                    .fill(Color.red)
+//                    .frame(width: 200, height: 200)
+//                    // simple
+////                    .transition(.scale)
+//                    // asymetric
+//                    .transition(.asymmetric(insertion: .scale, removal: .opacity))
+//            }
+//        }
     }
 }
 
