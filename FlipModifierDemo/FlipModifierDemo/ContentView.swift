@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         Text("Front")
             .flip(when: isFlipped, axis: (0, 1, 0)) {
-                Text("Back")
+                Text("Back Text")
             }
         .onTapGesture {
             withAnimation(.linear(duration: 2)) {
@@ -23,6 +23,7 @@ struct ContentView: View {
             }
         }
         .font(.largeTitle)
+        .animation(.linear(duration: 2))
     }
 }
 

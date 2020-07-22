@@ -31,16 +31,18 @@ struct FlipModifier<FlippedContent>: AnimatableModifier where FlippedContent: Vi
         self.axis = axis
     }
     
-    func body(content: Content) -> some View {
-        ZStack {
+    func body(content: Content) -> some View {        
+        return ZStack {
             content
-                .opacity(isFlipped ? 0 : 1)
-            
+                .opacity(animatableData > 90 ? 0 : 1)
+
             flippedContent()
-                .opacity(isFlipped ? 1 : 0)
+                .opacity(animatableData > 90 ? 1 : 0)
                 .rotation3DEffect(Angle.degrees(180), axis: axis)
         }
+        
         .rotation3DEffect(Angle.degrees(rotation), axis: axis)
+        .animation(nil)
     }
 }
 
