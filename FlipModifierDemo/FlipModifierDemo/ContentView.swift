@@ -18,9 +18,9 @@ struct ContentView: View {
                 Text("Back Text")
             }
         .onTapGesture {
-            withAnimation(.linear(duration: 2)) {
+//            withAnimation(.linear(duration: 2)) {
                 self.isFlipped.toggle()
-            }
+//            }
         }
         .font(.largeTitle)
         .animation(.linear(duration: 2))
